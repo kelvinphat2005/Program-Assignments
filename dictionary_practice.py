@@ -52,5 +52,33 @@ shoe_inv["Air Max"] -= 2
 shoe_inv["SB Dunk"] -= 2
 
 shoe_inv["Pegasus"] = 6
+game_prices["Minecraft"] = 27.99
 
 print(shoe_inv)
+
+#deleting
+del shoe_inv["SB Dunk"]
+del shoe_inv["Air Max"]
+
+#functions
+def total_price(food1,food2):
+    return "The total price of beef and cheese is " + str(grocery_list[food1] + grocery_list[food2])
+print(total_price("beef","cheese"))
+def price_difference(item1,item2):
+    price = grocery_list[item1] - grocery_list[item2]
+    return price
+print(price_difference("beef","cheese"))
+
+def restock(shoe,value):
+    shoe_inv[shoe] += value
+    return shoe_inv[shoe]
+print(shoe_inv["Yeezy"])
+restock("Yeezy",5)
+print(shoe_inv["Yeezy"])
+
+def clearance_sale(shoe,value):
+    shoe_inv[shoe] = shoe_inv[shoe]//value
+    return shoe_inv
+print(shoe_inv["Jordan 13"])
+clearance_sale("Jordan 13",5)
+print(shoe_inv["Jordan 13"])
