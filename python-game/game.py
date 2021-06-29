@@ -35,15 +35,17 @@ def route_1():
 def route_2():
     print("\nYou gather up enough courage to fight the monster.")
     print("However, you need a weapon to fight the beast.")
-    print("Conveniently there are weapons on the floor. You see a sword and a mallet.")
-    print("Which one do you choose? (sword or mallet)")
+    print("Conveniently there are weapons on the floor. You see a sword and a credit card.")
+    print("Which one do you choose? (sword or credit card)")
     answer = input("> ").lower()
     if answer == "sword":
         print("You pick up the mighty sword! As the beast lunges towards you, you take your blade and")
         print("with a strong grip, you slice the beast's head off!")
-        print("You win!")
-    elif answer == "mallet":
-        print("You pick up the sturdy mallet! ")
+        game_over("You win!")
+    elif answer == "credit card":
+        print("You pick up the credit card. For some reason, you are able to deal considerable damage to the beast with this handy card.")
+        print("You slash the beast multiple times, knocking the beast back to hell.")
+        game_over("You win!")
     else:
         game_over("Don't you know how to type something properly?")
 
